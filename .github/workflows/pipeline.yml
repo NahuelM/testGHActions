@@ -31,7 +31,7 @@ jobs:
           with:
             node-version: '18.18.1'
         - name: Install dependencies
-          run: npm install --no-audit --no-fund --no-ptional
+          run: npm install --no-audit --no-fund --no-otional
         - name: Build
           run: npm run build
         
