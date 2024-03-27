@@ -18,7 +18,7 @@ jobs:
           with:
             node-version: '18.18.1'
         - name: Install dependencies
-          run: cd /cra-integrador && npm install
+          run: cd cra-integrador && npm install
         - name: Build
           run: npm run build
         
