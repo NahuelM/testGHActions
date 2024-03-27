@@ -18,9 +18,9 @@ jobs:
           with:
             node-version: '18.18.1'
         - name: Install dependencies
-          run: cd /cra-integrador && npm install
+          run: cd cra-integrador && npm install --no-audit --no-fund --no-optional
         - name: Build
-          run: npm run build
+          run: cd cra-integrador && npm run build
         
         - name: SCP
           run: |
