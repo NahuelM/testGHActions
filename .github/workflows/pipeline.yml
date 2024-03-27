@@ -24,8 +24,15 @@ jobs:
           continue-on-error: true
         
         - name: SCP
-          run: |
-                scp -i ${{ secrets.SSH_PRIVATE_KEY }} -r cra-integrador/build ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/home
+          uses: appleboy/scp-action@v0.1.7
+          with:
+            host: ${{ secrets.HOST }}
+            username: ${{ secrets.EC2_USERNAME }}
+            port: ${{ secrets.PORT }}
+            key: ${{ secrets.SSH_PRIVATE_KEY }}
+            source: "cra-integrador/build"
+            target: /home
+
         - name: Deploy Front End
           uses: appleboy/ssh-action@master
           with:
