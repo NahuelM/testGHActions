@@ -24,7 +24,7 @@ jobs:
         
         - name: SCP
           run: |
-                scp -i ${{ secrets.SSH_PRIVATE_KEY }} -r build/ ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/home
+                scp -i ${{ secrets.SSH_PRIVATE_KEY }} -r cra-integrador/build/ ${{ secrets.EC2_USERNAME }}@${{ secrets.EC2_HOST }}:/home
         - name: Deploy Front End
           uses: appleboy/ssh-action@master
           with:
