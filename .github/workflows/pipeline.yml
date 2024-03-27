@@ -18,7 +18,7 @@ jobs:
           with:
             node-version: '18.18.1'
         - name: Install dependencies
-          run: cd cra-integrador && npm install --no-audit --no-fund --no-optional
+          run: cd cra-integrador && npm install --no-audit
         - name: Build
           run: cd cra-integrador && npm run build
         
