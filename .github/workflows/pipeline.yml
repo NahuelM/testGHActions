@@ -42,8 +42,7 @@ jobs:
             port: ${{ secrets.EC2_PORT }}
             script: |
                 cd /home/ubuntu
-                cp -r build/* /var/www/html
-                echo "Deply de Front terminado"
+                sudo cp -r build/* /var/www/html
 
                 
         - name: Deploy Back End
