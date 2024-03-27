@@ -41,7 +41,7 @@ jobs:
             key: ${{ secrets.SSH_PRIVATE_KEY }}
             port: ${{ secrets.EC2_PORT }}
             script: |
-                cd /home
+                cd /home/ubuntu
                 cp -r build/* /var/www/html
                 echo "Deply de Front terminado"
 
