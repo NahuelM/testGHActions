@@ -43,6 +43,7 @@ jobs:
             script: |
                 cd /home/ubuntu
                 sudo cp -r build/* /var/www/html
+                exit
 
                 
         - name: Deploy Back End
@@ -57,7 +58,8 @@ jobs:
               sudo docker start a4ce
               sudo docker exec a4ce /bin/bash -c "cd /home/G5---integrador/BACK\ END && mvn package -DskipTests"
               sudo docker exec a4ce /bin/bash -c "cd /home/G5---integrador/BACK\ END/target && java -jar ProyectoIntegrado-0.0.1-SNAPSHOT.jar > /dev/null 2>&1 &"
-        
+              exit
+              
         
 
 
